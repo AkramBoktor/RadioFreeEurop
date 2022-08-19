@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioFreeEroup", "RadioFreeEroup.csproj", "{A08EA8F5-8F30-4F97-AB2C-0D431C36BF64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C8090737-8827-43A0-8C8B-AF1D8C2B1A98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioFreeEroup.Domain", "..\RadioFreeEroup.Domain\RadioFreeEroup.Domain.csproj", "{59DF2E1D-AB0C-41E1-A5FC-2EF2B843EB64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CA6DB1D5-776E-4B3F-9069-B330A8A9DFB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioFreeEroup.Infrastructure", "..\RadioFreeEroup.Infrastructure\RadioFreeEroup.Infrastructure.csproj", "{F2DE85CF-C63F-4212-941C-387D098FFDD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{862BF96F-656E-4529-AF53-AA1003D43190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioFreeEurop.Apllication.Service", "..\RadioFreeEurop.Apllication.Service\RadioFreeEurop.Apllication.Service.csproj", "{22202352-6831-4A1C-ABF8-D4A5D6FAC290}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A08EA8F5-8F30-4F97-AB2C-0D431C36BF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08EA8F5-8F30-4F97-AB2C-0D431C36BF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08EA8F5-8F30-4F97-AB2C-0D431C36BF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08EA8F5-8F30-4F97-AB2C-0D431C36BF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59DF2E1D-AB0C-41E1-A5FC-2EF2B843EB64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59DF2E1D-AB0C-41E1-A5FC-2EF2B843EB64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59DF2E1D-AB0C-41E1-A5FC-2EF2B843EB64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59DF2E1D-AB0C-41E1-A5FC-2EF2B843EB64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DE85CF-C63F-4212-941C-387D098FFDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DE85CF-C63F-4212-941C-387D098FFDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DE85CF-C63F-4212-941C-387D098FFDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DE85CF-C63F-4212-941C-387D098FFDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22202352-6831-4A1C-ABF8-D4A5D6FAC290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22202352-6831-4A1C-ABF8-D4A5D6FAC290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22202352-6831-4A1C-ABF8-D4A5D6FAC290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22202352-6831-4A1C-ABF8-D4A5D6FAC290}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59DF2E1D-AB0C-41E1-A5FC-2EF2B843EB64} = {C8090737-8827-43A0-8C8B-AF1D8C2B1A98}
+		{F2DE85CF-C63F-4212-941C-387D098FFDD7} = {CA6DB1D5-776E-4B3F-9069-B330A8A9DFB8}
+		{22202352-6831-4A1C-ABF8-D4A5D6FAC290} = {862BF96F-656E-4529-AF53-AA1003D43190}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33B86A5A-DB85-4223-8395-AEBFBFEAEA40}
+	EndGlobalSection
+EndGlobal
