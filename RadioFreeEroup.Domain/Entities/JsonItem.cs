@@ -6,8 +6,7 @@ namespace RadioFreeEroup.Domain.Entities
 {
     public class JsonItem
     {
-        [Key]
-        public int ItemIDKey { get; set; }
+    
         public string Id { get; set; }
 
         public string Position { get; set; }

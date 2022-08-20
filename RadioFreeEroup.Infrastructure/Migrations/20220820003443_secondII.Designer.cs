@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RadioFreeEroup.Infrastructure.Context;
 
 namespace RadioFreeEroup.Infrastructure.Migrations
 {
     [DbContext(typeof(JsonItemContext))]
-    partial class JsonItemContextModelSnapshot : ModelSnapshot
+    [Migration("20220820003443_secondII")]
+    partial class secondII
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

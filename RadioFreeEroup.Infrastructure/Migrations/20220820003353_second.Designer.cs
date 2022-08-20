@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RadioFreeEroup.Infrastructure.Context;
 
 namespace RadioFreeEroup.Infrastructure.Migrations
 {
     [DbContext(typeof(JsonItemContext))]
-    partial class JsonItemContextModelSnapshot : ModelSnapshot
+    [Migration("20220820003353_second")]
+    partial class second
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,6 +30,9 @@ namespace RadioFreeEroup.Infrastructure.Migrations
 
                     b.Property<string>("Data")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ItemIDKey")
+                        .HasColumnType("int");
 
                     b.HasKey("Id", "Position");
 
