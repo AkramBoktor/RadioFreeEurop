@@ -8,16 +8,20 @@ namespace RadioFreeEroup.Infrastructure.Context
 {
     public class JsonItemContext : DbContext
     {
-        protected readonly IConfiguration Configuration;
+        public JsonItemContext(DbContextOptions<JsonItemContext> options) : base(options)
+        {
 
-        public JsonItemContext(IConfiguration configuration)
-        {
-            Configuration = configuration;
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-        {
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-        }
+        //protected readonly IConfiguration Configuration;
+
+        ////public JsonItemContext(IConfiguration configuration)
+        ////{
+        ////    Configuration = configuration;
+        ////}
+        ////protected override void OnConfiguring(DbContextOptions options)
+        ////{
+        ////    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+        //}
 
         public DbSet<JsonItem> JsonItems { get; set; }
 

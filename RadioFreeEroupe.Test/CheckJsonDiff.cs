@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using RadioFreeEroup.Domain.Entities;
 using RadioFreeEroup.Domain.IJsonItem;
 using RadioFreeEroup.Domain.Interfaces;
@@ -19,26 +20,23 @@ namespace RadioFreeEroupe.Test
         private static Microsoft.EntityFrameworkCore.DbContextOptions<JsonItemContext> options = new
       Microsoft.EntityFrameworkCore.DbContextOptionsBuilder<JsonItemContext>()
                       .UseSqlServer("Data Source=AKRAM-BOKTOR\\DEVELOPER;Initial Catalog=RadioFreeEroupe;Integrated Security=true")
-                      .Options;
-        protected readonly IConfiguration Configuration;
-        public CheckJsonDiff(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        .Options;
+    
 
-        //JsonItemContext JsonContext = new JsonItemContext(Configuration.GetConnectionString("DefaultConnection"));
+       private JsonItemContext jsonContext = new JsonItemContext(options);
 
 
-        [Fact(DisplayName = "Check if return the same as expected")]
+    [Fact(DisplayName = "Check if return the same as expected")]
         public void ShouldBeTheSame()
         {
-            //IUnitOfWork unitOfWork = new UnitOfWork(JsonContext);
+            IJsonItemRepository jsonItemRepository = new JsonItemRepository(jsonContext);
+            IUnitOfWork unitOfWork = new UnitOfWork(jsonContext,jsonItemRepository);
 
-            //IJsonItemDiffService _service = new JsonItemDiffService(unitOfWork);
+            IJsonItemDiffService _service = new JsonItemDiffService(unitOfWork);
 
-            //Task<JsonDiffDto> returnDTO = _service.GetComparison("1");
+            Task<JsonDiffDto> returnDTO = _service.GetComparison("1");
 
-            //Assert.True(returnDTO.Result.Message == "The data is the same");
+            Assert.True(returnDTO.Result.Message == "The data is the same");
         }
 
 

@@ -13,7 +13,6 @@ namespace RadioFreeEroup.Domain.Entities
 
         public string Data { get; set; }
 
-        
 
     }
 }
