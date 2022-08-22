@@ -23,14 +23,7 @@ namespace RadioFreeEroup.Controllers
 
   
 
-        /// <summary>
-		/// Handles the request to process data.
-		/// </summary>
-		/// <param name="id">Id to identify the request</param>
-		/// <param name="data">The base64 encoded data in Json format</param>
-		/// <returns>Data was stored</returns>
-        /// <response code="201">When the data was stored</response>
-        /// <response code="400">If the item is null or any error</response>
+   
 		[HttpPost]
         [Route("{id}/left")]
         public async Task<IActionResult> Left(string id, [FromBody] string jsonData)
@@ -57,14 +50,6 @@ namespace RadioFreeEroup.Controllers
 
         }
 
-        /// <summary>
-		/// Handles the request to process data.
-		/// </summary>
-		/// <param name="id">Id to identify the request</param>
-		/// <param name="data">The base64 encoded data in Json format</param>
-		/// <returns>Data was stored</returns>
-        /// <response code="201">When the data was stored</response>
-        /// <response code="400">If the item is null or any error</response>
 		[HttpPost]
         [Route("{id}/right")]
         public async Task<IActionResult> Right(string id, [FromBody] string jsonData)
@@ -91,11 +76,7 @@ namespace RadioFreeEroup.Controllers
 
         }
 
-        /// <summary>
-		/// Request the comparison between two data sent as left and right (route) using same id. 
-		/// </summary>
-		/// <param name="id">Id of the request.</param>
-		/// <returns><see cref="JsonDiffDto"/>Information about the comparison of the data.</returns>
+       
 		[HttpGet]
         [Route("{id}")]
         public async Task<IActionResult> Diff(string id)
